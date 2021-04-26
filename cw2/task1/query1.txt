@@ -1,0 +1,9 @@
+db.cl.find({friendsCount:{$lt:25},displayName:{$regex:"(?i)^A.*(?-i)es$"}},{displayName:1,followersCount:1,friendsCount:1}).sort({displayName:-1})
+
+output:
+{ "_id" : ObjectId("604be68ab8d89843573bae3a"), "displayName" : "angie torres", "friendsCount" : 23, "followersCount" : 33 }
+{ "_id" : ObjectId("604be68ab8d89843573bae45"), "displayName" : "angie torres", "friendsCount" : 23, "followersCount" : 33 }
+{ "_id" : ObjectId("604be68ab8d89843573bddc0"), "displayName" : "Arizona Companies", "friendsCount" : 0, "followersCount" : 10 }
+{ "_id" : ObjectId("604be68ab8d89843573bcdcc"), "displayName" : "Adejies", "friendsCount" : 13, "followersCount" : 10 }
+{ "_id" : ObjectId("604be68ab8d89843573bde00"), "displayName" : "Adejies", "friendsCount" : 13, "followersCount" : 10 }
+{ "_id" : ObjectId("604be68ab8d89843573be30a"), "displayName" : "Adejies", "friendsCount" : 13, "followersCount" : 10 }

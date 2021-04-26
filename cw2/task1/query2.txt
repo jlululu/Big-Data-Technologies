@@ -1,0 +1,8 @@
+db.cl.aggregate([
+{$match:{friendsCount:{$gt:0}}},
+{$project:{ratio:{$divide:["$followersCount","$friendsCount"]}}},
+{$group:{_id:null, avg_ratio:{$avg:"$ratio"}}}
+])
+
+output:
+{ "_id" : null, "avg_ratio" : 156.2146935903003 }
