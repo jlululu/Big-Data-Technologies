@@ -1,0 +1,8 @@
+select max(num_visits)
+from(
+	select count(*) num_visits
+	from logs
+	group by user
+) k;
+
+output: 78

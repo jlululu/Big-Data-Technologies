@@ -1,0 +1,6 @@
+select distinct(user) 
+from logs 
+where length(query)>0 and 
+      (substr(time,7,2)='21' or substr(time,7,2)='22');
+
+output: 67
